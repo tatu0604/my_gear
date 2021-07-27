@@ -1,0 +1,121 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: black;
+  height: 100px;
+  display: flex;
+}
+
+.searchbar {
+  width: 33vw;
+}
+
+.heading {
+  width: 34vw;
+}
+
+.title {
+  margin: 25px 170px;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.navbar {
+  width: 33vw;
+}
+
+.nav-lists {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  font-size: large;
+  margin: 60px 70px 0px 70px;
+}
+
+li {
+  list-style: none;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: white;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: white;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* メイン画像上 */
+
+.contents {
+
+}
+
+.first-view{
+  height: 60vh;
+}
+
+.topimage {
+  height: 85vh;
+  width: 100%;
+}
+
+/* メイン画像下 */
+.middle-content{
+  height: 450px;
+  background-color: black;
+}
+
