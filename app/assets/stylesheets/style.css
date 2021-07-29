@@ -97,6 +97,11 @@ li {
   color: white;
 }
 
+.guest {
+  text-emphasis: none;
+  color: white;
+}
+
 
 /* メイン画像上 */
 
@@ -119,3 +124,65 @@ li {
   background-color: black;
 }
 
+/* 投稿ボタン */
+.fixed_btn{
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  padding: 5px 3px;
+}
+
+/* ページTOPに戻る */
+.pagetop{
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 200px;
+}
+.pagetop a{
+  display: block;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: orange;
+  border-radius: 50%;
+  line-height: 50px;
+}
+.pagetop a i{
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+}
+
+.postpage{
+  display: none;
+  position: fixed;
+  right: 26px;
+  bottom: 60px;
+}
+.postpage a{
+  display: block;
+  font-size: 0;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background: rgb(253, 184, 253);
+  border-radius: 50%;
+  line-height: 50px;
+}
+.postpage a i{
+  margin-left: 3px;
+  font-size: 42px;
+  color: white;
+  line-height: 70px;
+}
+
+.postin {
+  font-size: 16px;
+  line-height: 3px;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-family: 'ヒラギノ角ゴ Std W8','Hiragino Kaku Gothic Std';
+}
