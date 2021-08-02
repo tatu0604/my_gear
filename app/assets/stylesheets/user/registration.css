@@ -8,7 +8,6 @@ body,html {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(180deg, #a4a4d1 70%, #4040a8);
   text-align: center;
   font-family: 'Segoe UI';
 }
@@ -22,39 +21,46 @@ form {
 input {
   width: 100%;
   background: transparent;
-  border-bottom: solid 1px #7053c4;
+  border-bottom: solid 1px deepskyblue;
   border-top: none;
   border-left: none;
   border-right: none;
   font-size: 1rem;
   padding: 0.5em 0.4em;
   transition: all 0.4s;
-  color: #BDBDBD;;
+  color: white;
   margin: 0.7rem 0;
 }
+
+input::placeholder {
+  color: white;
+  font-weight: bold;
+}
+
 input:focus {
-  background: #7035c4;
+  background: white;
   transform: scale3d(1.06,1.06,1.06);
 }
 
 button {
   background: transparent;
-  width: 50%;
+  width: 40%;
   margin-top: 2.5rem;
-  font-size: 1rem;
-  border: solid 1px #7053c4;
-  padding: 1em 0;
-  color: #bdc3c7;
+  font-size: 1.5rem;
+  border: solid 1px deepskyblue;
+  padding: 0.3em 0;
+  color: white;
   transition: all 0.6s;
+  font-family: 'Jost', sans-serif;
 }
 button:hover {
   cursor:pointer;
-  background: #7035c4;
+  background: deepskyblue;
 }
 
 h1 {
-  color: #bdc3c7;
-  border-bottom: solid 1px #7035c4;
+  color: deepskyblue;
+  border-bottom: solid 1px deepskyblue;
   padding: 0 0 0.8em 0;
   width: 50%;
   margin-left: 25%;

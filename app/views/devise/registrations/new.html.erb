@@ -1,15 +1,18 @@
-        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+<div class="regi">
 
-          <h1>無料登録</h1>
+  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
 
-          <%= f.text_field :nickname, placeholder:"ニックネーム", id:"user_name" %>
+    <h1>無料登録</h1>
 
-          <%= f.email_field :email, placeholder:"メールアドレス", id:"user_email", autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :nickname, placeholder:"ニックネーム", id:"user_name" %>
 
-          <%= f.password_field :password, placeholder:"パスワード", id:"user_password", autocomplete: "new-password" %>
+    <%= f.email_field :email, placeholder:"メールアドレス", id:"user_email", autofocus: true, autocomplete: "email" %>
 
-          <%= f.password_field :password_confirmation, placeholder:"パスワード再入力", id:"user_password_confirmation", autocomplete: "new-password" %>
+    <%= f.password_field :password, placeholder:"パスワード", id:"user_password", autocomplete: "new-password" %>
 
-          <button>Sign up</button>
+    <%= f.password_field :password_confirmation, placeholder:"パスワード再入力", id:"user_password_confirmation", autocomplete: "new-password" %>
 
-      <% end %>
+    <button>Sign up</button>
+
+  <% end %>
+</div>

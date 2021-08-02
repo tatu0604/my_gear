@@ -7,27 +7,45 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <header class="header"> 
-      <div class="searchbar"></div>
-      <div class="heading">
-      <li><%= link_to 'My Gear', posts_path, class: "title" %></li></div>
-      <div class="navbar">
-        <ul class="nav-lists">
-      <% if user_signed_in? %>
-      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
-      <% else %>
-      <li><%= link_to 'Login', new_user_session_path, class: "login" %></li>
-      <li><%= link_to 'Sign up', new_user_registration_path, class: "sign-up" %></li>
-      <li><%= link_to 'Guest', users_guest_login_path, class: "guest", method: :post %></li>
-      <% end %>
-        </ul>
+      <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to image_tag("My Gear.png", class: :logo), root_path %>
+          </div>
+          <%# ログインしているときは以下を表示するようにしましょう %>
+          <% if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to "Category", "#", class: :nav__btn %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: :nav__btn %>
+              <%= link_to current_user.nickname, user_path(current_user.id), class: :nav__btn %>
+              <%= link_to "Help", "#", class: :nav__btn %>
+              
+            </div>
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+          <% else %>
+            <div class="nav__right">
+              <%= link_to "Category", "#", class: :nav__btn %>
+              <%= link_to "Login", new_user_session_path, class: :nav__btn %>
+              <%= link_to "Sign up", new_user_registration_path, class: :nav__btn %>
+              <%= link_to 'Guest', users_guest_login_path, class: :nav__btn, method: :post %>
+              <%= link_to "Help", "#", class: :nav__btn %>
+            </div>
+          <% end %>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
         </div>
-        <div class="underline"></div>
+      </div>
+      <hr> 
     </header>
+    
 
     <%= yield %>
   </body>
