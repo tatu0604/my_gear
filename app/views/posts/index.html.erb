@@ -8,13 +8,12 @@
   <div class="onesheet"></div>
   <div class="twosheet">
     <% @posts.each do |post| %>
-    <%= link_to image_tag(post.image, class:"google-btn"), "#" %>
-      <p><%= post.title %></p>
-      <span class="name">
-        <%= post.summary %>
-      </span>
-    </div>
-  <% end %>
+      <%= link_to image_tag(post.image, class:"google-btn"), post_path(post.id) %>
+        <p><%= post.title %></p>
+        <span class="name">
+          <%= post.summary %>
+        </span>
+    <% end %>
   </div>
   </body>
 </html>
