@@ -7,12 +7,15 @@
   <body>
   <div class="onesheet"></div>
   <div class="twosheet">
+  <ul class="card-list">
     <% @posts.each do |post| %>
+    <li class="card">
       <%= link_to image_tag(post.image, class:"google-btn"), post_path(post.id) %>
         <p><%= post.title %></p>
         <span class="name">
           <%= post.summary %>
         </span>
+        </li>
     <% end %>
   </div>
   </body>
