@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30c31a4d9.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
@@ -20,10 +22,14 @@
           <div class="nav__left">
             <%= link_to image_tag("My Gear.png", class: :logo), root_path %>
           </div>
+          <div class="nav__center"><%= form_with(url: root_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "🔎検索する", class: "search-input" %>
+  <%= form.submit "検索",  class: "search-btn" %>
+<% end %></div>
           <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "Category", "#", class: :nav__btn %>
+              <%= link_to "Category", "#", class: :nav__btn, id: :category %>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: :nav__btn %>
               <%= link_to current_user.nickname, user_path(current_user.id), class: :nav__btn %>
               <%= link_to "Help", "#", class: :nav__btn %>
@@ -46,7 +52,8 @@
       <hr> 
     </header>
     
-
+   
+  
     <%= yield %>
   </body>
 </html>

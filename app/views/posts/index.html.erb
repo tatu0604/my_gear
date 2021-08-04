@@ -1,25 +1,21 @@
-  <!doctype html>
-<html>
-  <head>
-    <script src="https://kit.fontawesome.com/f30c31a4d9.js" crossorigin="anonymous"></script>
-  </head>
- 
-  <body>
+
   <div class="onesheet"></div>
+  <div class="block1"></div>
+  <div class="block2">
+  <%= image_tag("YouTube-logo.png", class:"google-btn") %>
+  </div>
   <div class="twosheet">
+  <h1>Instruments</h1>
   <ul class="card-list">
     <% @posts.each do |post| %>
     <li class="card">
       <%= link_to image_tag(post.image, class:"google-btn"), post_path(post.id) %>
-        <p><%= post.title %></p>
-        <span class="name">
-          <%= post.summary %>
-        </span>
+        <p class="inst-title"><%= post.title %></p>
         </li>
     <% end %>
   </div>
-  </body>
-</html>
+  
+<div class="footer">フッターでっせ</div>
   
 <p class="pagetop" style="display: block;">
 <a href="#">
