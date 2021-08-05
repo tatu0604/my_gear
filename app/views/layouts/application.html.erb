@@ -12,13 +12,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f30c31a4d9.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    
   </head>
 
   <body>
+      <a class="menuButton" id="menuButton">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+    <nav id="nav">
+      <ul>
+        <%= link_to "Guitar", guitar_posts_path %>
+        <%= link_to "Bass", bass_posts_path %>
+        <%= link_to "Amp", amp_posts_path %>
+        <%= link_to "Effect", effect_posts_path %>
+        <%= link_to "Drum", drum_posts_path %>
+        <%= link_to "Keyboard", keyboard_posts_path %>
+        <%= link_to "PA", pa_posts_path %>
+        <%= link_to "Accessory", accessory_posts_path %>
+        <%= link_to "Ukulele", ukulele_posts_path%>
+        <%= link_to "Sax", sax_posts_path %>
+        <%= link_to "Trumpet", trumpet_posts_path %>
+        <%= link_to "Violin", violin_posts_path %>
+        <%= link_to "Strings", strings_posts_path %>
+        <%= link_to "Wind", wind_posts_path %>
+        <%= link_to "DTM", dtm_posts_path %>
+        <%= link_to "Others", others_posts_path %>
+      </ul>
+  </nav>
       <header class="header">
+      
       <div class="inner">
+      
         <div class="nav">
+        
           <div class="nav__left">
             <%= link_to image_tag("My Gear.png", class: :logo), root_path %>
           </div>
@@ -26,34 +54,35 @@
   <%= form.text_field :keyword, placeholder: "🔎検索する", class: "search-input" %>
   <%= form.submit "検索",  class: "search-btn" %>
 <% end %></div>
-          <%# ログインしているときは以下を表示するようにしましょう %>
+        
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "Category", "#", class: :nav__btn, id: :category %>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: :nav__btn %>
               <%= link_to current_user.nickname, user_path(current_user.id), class: :nav__btn %>
-              <%= link_to "Help", "#", class: :nav__btn %>
+              <%= link_to "Help", help_posts_path, class: :nav__btn %>
+              <%= link_to "Contact", contact_posts_path, class: :nav__btn, id: :category %>
               
             </div>
-          <%# // ログインしているときは上記を表示するようにしましょう %>
-          <%# ログインしていないときは以下を表示するようにしましょう %>
+   
           <% else %>
             <div class="nav__right">
-              <%= link_to "Category", "#", class: :nav__btn %>
               <%= link_to "Login", new_user_session_path, class: :nav__btn %>
               <%= link_to "Sign up", new_user_registration_path, class: :nav__btn %>
               <%= link_to 'Guest', users_guest_login_path, class: :nav__btn, method: :post %>
               <%= link_to "Help", "#", class: :nav__btn %>
+              <%= link_to "Contact", "#", class: :nav__btn, id: :category %>
+
             </div>
           <% end %>
-          <%# // ログインしていないときは上記を表示するようにしましょう %>
+        
+
         </div>
       </div>
+      
       <hr> 
     </header>
-    
-   
-  
+    <script src="hum.js"></script>
     <%= yield %>
+    
   </body>
 </html>

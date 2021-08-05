@@ -39,6 +39,83 @@ class PostsController < ApplicationController
     redirect_to post_path(@post.id)
   end
 
+  def search
+    @posts = Post.all
+  end
+
+  def help
+    @posts = Post.all
+  end
+
+  def contact
+    @posts = Post.all
+  end
+
+  def guitar
+    @posts = Post.all
+  end
+
+  def bass
+    @posts = Post.all
+  end
+
+  def amp
+    @posts = Post.all
+  end
+
+  def effect
+    @posts = Post.all
+  end
+
+  def drum
+    @posts = Post.all
+  end
+
+  def keyboard
+    @posts = Post.all
+  end
+
+  def pa
+    @posts = Post.all
+  end
+
+  def accessory
+    @posts = Post.all
+  end
+
+  def ukulele
+    @posts = Post.all
+  end
+
+  def sax
+    @posts = Post.all
+  end
+
+  def trumpet
+    @posts = Post.all
+  end
+
+  def violin
+    @posts = Post.all
+  end
+
+  def strings
+    @posts = Post.all
+  end
+
+  def wind
+    @posts = Post.all
+  end
+
+  def dtm
+    @posts = Post.all
+  end
+
+  def others
+    @posts = Post.all
+  end
+
+
   private
 
   def post_params

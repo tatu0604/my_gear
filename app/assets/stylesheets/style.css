@@ -46,10 +46,95 @@ a {
   height: 88px;
   width: 100%;
   opacity: 0.9;
+  z-index: 1;
+}
+
+
+.menuButton {
+  display: block;
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  top: 7px;
+  left: 60px;
+  z-index: 3;
+}
+
+.menuButton div {
+  height: 3px;
+  width: 40%;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+}
+
+
+.menuButton div:nth-of-type(1) {
+  transform: translate(-50%, -10px);
+  transform-origin: 0% 50%;
+}
+
+.menuButton div:nth-of-type(3) {
+  transform: translate(-50%, 8px);
+  transform-origin: 0% 50%;
+}
+
+.menuButton.active div:nth-of-type(1) {
+  transform: rotate(45deg) translate(-50%, 0);
+  background: black;
+  left: 0;
+}
+
+.menuButton.active div:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menuButton.active div:nth-of-type(3) {
+  transform: rotate(-45deg) translate(-50%, 0);
+  background: black;
+  left: 0;
+}
+
+nav {
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  font-size: 30px;
+  width: 300px;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 200px 0 200px;
+  z-index: 2;
+  overflow: auto;
+}
+
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+nav ul li:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+nav.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .inner {
-  width: 1024px;
+  width: 1224px;
   margin: 0 auto;
 }
 .nav {
@@ -64,18 +149,25 @@ a {
 }
 
 .logo {
-  width: 200px;
+  width: 260px;
+  height: 85px;
+  margin-right: 10px;
 }
 
 .nav__center {
-  width: 290px;
+  width: 210px;
+}
+
+.nav__right {
+  width: 750px;
+  margin-left: 50px;
 }
 
 .search-form{
   position:relative;/*フォームの相対位置*/	
   max-width:270px;/*フォームのサイズ*/
-  margin-top: 18px;
-  margin-left: 15px;
+  margin-top: 19px;
+  margin-left: 50px;
 }
 
 .search-input {
@@ -133,6 +225,7 @@ a {
 .nav__logout:hover{
   opacity: 0.5;
 }
+
 
 /* フォーム周り */
 .form__wrapper{
@@ -211,8 +304,13 @@ hr {
 }
 
 .block2 {
-  height: 500px;
+  height: 600px;
   background-color: black;
+}
+ 
+.slide-one {
+  height: 500px;
+  background-color: #e8fdfd;
 }
 
 .twosheet {
@@ -220,6 +318,28 @@ hr {
   width: 100%;
   height: 1500px;
   padding-top: 15px;
+}
+
+.head-border {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+
+.head-border:before,
+.head-border:after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: deepskyblue;
+}
+
+.head-border:before {
+  margin-right: 1.5rem;
+}
+
+.head-border:after {
+  margin-left: 1.5rem;
 }
 
 /* Lazy Load Styles */
