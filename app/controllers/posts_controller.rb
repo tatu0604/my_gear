@@ -40,7 +40,6 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.all
   end
 
   def help
@@ -52,67 +51,68 @@ class PostsController < ApplicationController
   end
 
   def guitar
-    @posts = Post.all
+    @posts = Post.where(category_id: 2)
+    
   end
 
   def bass
-    @posts = Post.all
+    @posts = Post.where(category_id: 3)
   end
 
   def amp
-    @posts = Post.all
+    @posts = Post.where(category_id: 4)
   end
 
   def effect
-    @posts = Post.all
+    @posts = Post.where(category_id: 5)
   end
 
   def drum
-    @posts = Post.all
+    @posts = Post.where(category_id: 6)
   end
 
   def keyboard
-    @posts = Post.all
+    @posts = Post.where(category_id: 7)
   end
 
   def pa
-    @posts = Post.all
+    @posts = Post.where(category_id: 8)
   end
 
   def accessory
-    @posts = Post.all
+    @posts = Post.where(category_id: 9)
   end
 
   def ukulele
-    @posts = Post.all
+    @posts = Post.where(category_id: 10)
   end
 
   def sax
-    @posts = Post.all
+    @posts = Post.where(category_id: 11)
   end
 
   def trumpet
-    @posts = Post.all
+    @posts = Post.where(category_id: 12)
   end
 
   def violin
-    @posts = Post.all
+    @posts = Post.where(category_id: 13)
   end
 
   def strings
-    @posts = Post.all
+    @posts = Post.where(category_id: 14)
   end
 
   def wind
-    @posts = Post.all
+    @posts = Post.where(category_id: 15)
   end
 
   def dtm
-    @posts = Post.all
+    @posts = Post.where(category_id: 16)
   end
 
   def others
-    @posts = Post.all
+    @posts = Post.where(category_id: 17)
   end
 
 

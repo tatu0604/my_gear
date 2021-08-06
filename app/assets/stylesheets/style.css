@@ -189,7 +189,7 @@ nav.active {
   left:140px;/*検索ボタンの位置調整*/  
   top:0;
   border-radius:0 12px 12px 0;/*検索ボタンの角を丸める*/ 
-  background:deepskyblue;/*検索ボタンの背景カラー*/ 
+  background:rgb(87, 213, 255);/*検索ボタンの背景カラー*/ 
   border:none;/*検索ボタンの枠線を消す*/ 
   color:#fff;/*検索ボタンのテキストカラー*/ 
   font-weight:bold;/*検索ボタンのテキスト太字*/ 
@@ -288,42 +288,102 @@ hr {
 }
 
 .block1::before{
-  content:"";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  
-  /*ここで三角形のサイズを決める。必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-  border-width: 100px 0 0 100vw ;
- 
-  /*transparentで余分な線を消す*/
-  border-color: transparent  transparent  transparent #000000;
+  border-bottom: 10vw solid black;  /* 三角をグレーにする */ 
+  border-left: 100vw solid transparent;
 }
 
+.block3 { 
+  padding-bottom: calc(10vw + 10px);  
+    position: relative;
+    overflow: hidden;
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #b6fbff, #8eaddd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.block3::before {
+  height: 10px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 10vw solid rgb(0, 0, 0);  /* 三角を白にする */ 
+  border-right: 100vw solid transparent;
+}
+
+
 .block2 {
-  height: 600px;
+  padding-top: 70px;
+  height: 850px;
   background-color: black;
+}
+
+.youtube-logo {
+  height: 70px;
+  margin-right: 1170px;
+}
+
+
+.youtube-h {
+  width: 1000px;
+  display: flex;
+  margin-left: 0;
+  align-items: center;
+  border-bottom: none;
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+}
+
+.youtube-h:before,
+.youtube-h:after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.youtube-h:before {
+  margin-right: 1.5rem;
+}
+
+.youtube-h:after {
+  margin-left: 1.5rem;
+}
+
+.youtube {
+  margin-top: 10px;
+  border-radius: 10px;
 }
  
 .slide-one {
   height: 500px;
-  background-color: #e8fdfd;
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #b6fbff, #8eaddd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 .twosheet {
-  background-color: #e8fdfd;
   width: 100%;
   height: 1500px;
-  padding-top: 15px;
+  padding-top: 103px;
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #b6fbff, #8eaddd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 .head-border {
   display: flex;
   align-items: center;
   border-bottom: none;
+  color: #fff;
 }
 
 .head-border:before,
@@ -331,7 +391,7 @@ hr {
   content: "";
   height: 1px;
   flex-grow: 1;
-  background-color: deepskyblue;
+  background-color: rgb(255, 255, 255);
 }
 
 .head-border:before {
@@ -385,7 +445,7 @@ html, body {
 
 .card {
   display: inline-block;
-  background-color: rgb(221, 246, 255);
+  background-color: white;
   border-radius: 10px;
   width: 90%;
   max-width: 20rem;
@@ -418,6 +478,7 @@ html, body {
 }
 
 .inst-title {
+  margin-right: 200px;
   height: 32px;
   color: gray;
   font-size: large;
