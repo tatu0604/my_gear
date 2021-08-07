@@ -4,13 +4,13 @@
 
     <h1>無料登録</h1>
 
-    <%= f.text_field :nickname, placeholder:"ニックネーム", id:"user_name" %>
+    <%= f.text_field :nickname, placeholder:"ニックネーム * ", id:"user_name" %>
 
-    <%= f.email_field :email, placeholder:"メールアドレス", id:"user_email", autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, placeholder:"メールアドレス * ", id:"user_email", autofocus: true, autocomplete: "email" %>
 
-    <%= f.password_field :password, placeholder:"パスワード", id:"user_password", autocomplete: "new-password" %>
+    <%= f.password_field :password, placeholder:"パスワード * ", id:"user_password", autocomplete: "new-password" %>
 
-    <%= f.password_field :password_confirmation, placeholder:"パスワード再入力", id:"user_password_confirmation", autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, placeholder:"パスワード再入力 * ", id:"user_password_confirmation", autocomplete: "new-password" %>
 
     <button>Sign up</button>
 

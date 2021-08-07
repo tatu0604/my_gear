@@ -1,8 +1,12 @@
+<div class="post-edit">
+
     <%= form_with model: @post, local: true do |f| %>
       <%= f.text_area :title, placeholder:"タイトル", id:"post_title" %>
       <%= f.text_area :summary, placeholder:"詳細", id:"post_summary" %>
+         <label for="file" class="filelabel">ファイルを選択 * </label>
+  <input type="file" name="fileinput" id="file" class="fileinput">
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-        <%= f.file_field :image %>
-      <%= f.submit "編集する" ,class: :nav__btn %>
+      <button>編集する</button>
     <% end %>
+</div>
 
