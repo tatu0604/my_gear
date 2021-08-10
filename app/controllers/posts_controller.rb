@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to
+      redirect_to root_path
     else
       render :edit
     end
@@ -40,6 +40,7 @@ class PostsController < ApplicationController
   end
 
   def search
+    @posts = Post.search(params[:keyword])
   end
 
   def help

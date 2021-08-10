@@ -7,6 +7,15 @@ class Post < ApplicationRecord
     validates :image
   end
 
+  def self.search(search)
+    if search != ""
+      Post.where('title LIKE(?)', "%#{search}%")
+      Post.where('summary LIKE(?)', "%#{search}%")
+    else
+      Post.all
+    end
+  end
+
   belongs_to :user
  # has_many :comments
   has_one_attached :image

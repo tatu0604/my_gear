@@ -3,10 +3,12 @@
     <%= form_with model: @post, local: true do |f| %>
       <%= f.text_area :title, placeholder:"タイトル", id:"post_title" %>
       <%= f.text_area :summary, placeholder:"詳細", id:"post_summary" %>
-         <label for="file" class="filelabel">ファイルを選択 * </label>
-  <input type="file" name="fileinput" id="file" class="fileinput">
+      
+      <%= f.label :image, "ファイルを選択", for:"file", class:"filelabel" %>
+      <%= f.file_field :image, id:"file", class:"fileinput", style: "display: none;" %> 
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
       <button>編集する</button>
     <% end %>
+    <div id="image-list"></div>
 </div>
 

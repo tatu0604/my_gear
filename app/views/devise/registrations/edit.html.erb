@@ -2,9 +2,11 @@
 
   <%= form_with model: @user, local: true do |f| %>
 
-    <h1>無料登録</h1>
+    <h1>ユーザー編集</h1>
 
     <%= f.text_field :nickname, placeholder:"ニックネーム * ", id:"user_name" %>
+
+    <%= f.text_area :profile, placeholder:"プロフィール", id:"post_summary" %>
 
     <%= f.email_field :email, placeholder:"メールアドレス * ", id:"user_email", autofocus: true, autocomplete: "email" %>
 

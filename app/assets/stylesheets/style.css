@@ -178,25 +178,39 @@ nav.active {
   top:0; 	
   outline:0;/*クリック時の青い枠線消す*/	
   height:30px;/*検索ボックスの高さ*/	
-  width: 140px;
+  width: 165px;
   padding:0 10px;/*テキスト位置調整*/	 
   border-radius:12px 0 0 12px;/*検索ボックスの角を丸める*/		
-  background:#eee;/*検索ボックスの背景カラー*/
+  background:rgb(255, 255, 255);/*検索ボックスの背景カラー*/
+  color: rgb(131, 131, 131);
+  font-size: 13px;
+  border-bottom: none;
+}
+
+.search-input:focus {
+  transform: none;
+}
+
+.search-input::placeholder {
+  color: rgb(180, 180, 180);
+  font-weight: 400;
+  font-size: 13px;
 }
 
 .search-btn {
-  width:50px;/*検索ボタンの横幅*/ 
+  width:45px;/*検索ボタンの横幅*/ 
   height:30px;/*検索ボタンの縦幅*/ 
   position:absolute;/*検索ボタンの絶対位置*/  
-  left:140px;/*検索ボタンの位置調整*/  
+  left:165px;/*検索ボタンの位置調整*/  
   top:0;
   border-radius:0 12px 12px 0;/*検索ボタンの角を丸める*/ 
   background:rgb(87, 213, 255);/*検索ボタンの背景カラー*/ 
   border:none;/*検索ボタンの枠線を消す*/ 
   color:#fff;/*検索ボタンのテキストカラー*/ 
-  font-weight:bold;/*検索ボタンのテキスト太字*/ 
+  font-weight:400;/*検索ボタンのテキスト太字*/ 
   font-size:16px;/*検索ボタンのフォントサイズ*/ 
   padding-top: 3px;
+  border-bottom: none;
 }
 
 .nav__btn{
@@ -275,27 +289,14 @@ hr {
 }
 
 /* メイン画像 */
-.onesheet {
-  background-image: url(topguitar.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: #fff;
-  padding-bottom: 789px;
-}
 
 .block1::before{
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  border-bottom: 10vw solid black;  /* 三角をグレーにする */ 
-  border-left: 100vw solid transparent;
+  border-bottom: 7vw solid black;  
+  border-right: 100vw solid transparent;
 }
 
 .block3 { 
@@ -309,13 +310,13 @@ hr {
 }
 
 .block3::before {
-  height: 10px;
+  height: 53px;
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
-  border-top: 10vw solid rgb(0, 0, 0);  /* 三角を白にする */ 
-  border-right: 100vw solid transparent;
+  border-top: 7vw solid rgb(0, 0, 0);
+  border-left: 100vw solid transparent;
 }
 
 
@@ -388,6 +389,7 @@ hr {
   color: #fff;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
+  padding-top: 100px;
 }
 
 .head-border:before,
@@ -605,6 +607,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex ;
 }
 
 .post-edit {
@@ -614,6 +617,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
 }
 
 
@@ -676,4 +680,176 @@ textarea:focus {
   background-color: deepskyblue;
   border-radius: 20px;
   margin: 0 auto;
+  outline:0;
+}
+
+#slideshow {
+  position: relative;
+  width:  1440px; /* 画像の横幅に合わせて記述 */
+  height: 789px; /* 画像の高さに合わせて記述 */
+}
+#slideshow img {
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: -3;
+  opacity: 0.0;
+}
+#slideshow img.active {
+  z-index: -1;
+  opacity: 1.0;
+}
+#slideshow img.last-active {
+  z-index: -2;
+}
+
+.guitar {
+  background-image: url(guitar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.bass {
+  background-image: url(bass.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.amp {
+  background-image: url(amp.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.eff {
+  background-image: url(eff.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.drum {
+  background-image: url(drum.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.key {
+  background-image: url(key.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.pa {
+  background-image: url(pa.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.acs {
+  background-image: url(acs.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.ukulele {
+  background-image: url(ukulele.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.sax {
+  background-image: url(sax.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.trumpet {
+  background-image: url(trumpet.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.violin {
+  background-image: url(violin.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.strings {
+  background-image: url(strings.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.winds {
+  background-image: url(wind.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.dtm {
+  background-image: url(dtm.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+.others {
+  background-image: url(others.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-bottom: 770px;
+}
+
+#image-list img {
+  height: 150px;
+  width: 150px;
+  margin-top: 410px;
+  border-radius: 5px;
 }
