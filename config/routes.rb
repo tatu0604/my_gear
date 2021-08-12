@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   end
   root to: "posts#index"
   resources :posts do
+
+    resources :comments, only: :create
+    
     collection do
       get 'search'
       get 'help'
@@ -30,6 +33,7 @@ Rails.application.routes.draw do
       get 'others'
     end
   end
+  
 
   resources :users, only: :show
 end

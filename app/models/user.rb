@@ -14,5 +14,5 @@ class User < ApplicationRecord
   end
 
   has_many :posts
- # has_many :comments
+  has_many :comments
 end

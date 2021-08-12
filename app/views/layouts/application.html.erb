@@ -7,7 +7,9 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -35,6 +37,7 @@ $(function() {
    setInterval( "slideSwitch()", 8000 );
 });
 </script>
+
   </head>
 
   <body>
@@ -106,7 +109,7 @@ $(function() {
       <hr> 
     </header>
     <%= yield %>
-    <div class="footer"><p class="footer-f">◎ Everyone use MyGear.</p></div>
+
 
   </body>
 </html>
