@@ -21,7 +21,7 @@
     <div class="mb-600">
         <li class="fadein">
       <%= image_tag("slide.png", class:"google-btn") %>
-        <p class="inst-title">#新しく買いました！</p>
+        <p class="inst_title">#新しく買いました！</p>
         </li>
                 <p id="slide1" class="fadein">投稿の方法</p>
         <p id="slide2" class="fadein">右下の ' 投稿する ' を押してタイトル、<br>詳細、写真、カテゴリー(必須)を記入して<br>投稿します。</p>
@@ -49,9 +49,10 @@
     <% @posts.each do |post| %>
     <li class="card">
       <%= link_to image_tag(post.image, class:"google-btn"), post_path(post.id) %>
-        <p class="inst-title">#<%= post.title %></p>
+        <p class="inst_title">#<%= post.title %></p>
         </li>
     <% end %>
+  </ul>
   </div>
   
   

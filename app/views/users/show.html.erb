@@ -1,1 +1,29 @@
-マイページ
+<div class="showsheet1">
+  <h1 class="head-border">My page</h1>
+  <div class="showsheet2">
+    <div class="show-image"><%= image_tag("bassist.jpg", class:"user_image") %></div>
+     <div class="nickname-h">Nickname.</div>
+     <hr class="title-hr">
+     <div class="show-title"><%= @user.nickname %></div> 
+     <div class="nickname-h2">Profile.</div>
+     <hr class="title-hr2">
+     <div class="show-summary"><%= @user.profile %></div> 
+  </div>
+</div>
+ 
+  <div class="show3">
+   <div class="title-h3">My posts.</div>
+    <hr class="title-hr3">
+      <ul class="usercard-list">
+    <% @posts.each do |post| %>
+    <li class="card">
+      <%= link_to image_tag(post.image, class:"google-btn"), post_path(post.id) %>
+        <p class="inst_title">#<%= post.title %></p>
+        </li>
+    <% end %>
+  </ul>
+  </div>
+
+<%= link_to "削除する", user_registration_path, method: :delete, class: :userdestroy_btn %>
+<%= link_to "編集する", user_registration_path, class: :useredit_btn %>
+</div>

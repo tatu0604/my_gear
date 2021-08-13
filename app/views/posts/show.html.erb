@@ -1,36 +1,40 @@
-   <div class="showsheet1">
+<div class="showsheet1">
   <h1 class="head-border">Details page</h1>
   <div class="showsheet2">
     <div class="show-image"><%= image_tag @post.image %></div>
-  <div class="title-h">Title.</div>
-  <hr class="title-hr">
-  <div class="show-title"><%= @post.title %></div> 
-  <div class="title-h2">Detail.</div>
-  <hr class="title-hr2">
-  <div class="show-summary"><%= @post.summary %></div> 
- 
+     <div class="title-h">Title.</div>
+     <hr class="title-hr">
+     <div class="show-title"><%= @post.title %></div> 
+     <div class="title-h2">Detail.</div>
+     <hr class="title-hr2">
+     <div class="show-summary"><%= @post.summary %></div> 
+  </div>
 </div>
- <div class="show2">
- <div class="show-comments">
-          <%= form_with model: [@post, @comment], id: "form", local: true do |f|%>
-            <div class="field">
-              <%= f.text_field :text, placeholder:"コメントを入力...", class: :comment_form %>
-            </div>
-            <div class="actions">
-              <%= f.submit "コメントする", id: "comment",  class: :comment_btn  %>
-            </div>
-          <% end %> 
-                  <ul class="comments_lists">
-          <% @comments.each do |comment| %>
-            <li class="comments_list">
-              <%= link_to "#{comment.user.nickname}", user_path(comment.user), class: :comment_user %>
-              <p><%= comment.text%></p>
-            </li>
-          <% end %>
+ 
+  <div class="show2">
+   <div class="title-h3">Comments.</div>
+    <hr class="title-hr3">
+     <div class="show-comments">
+       <%= form_with model: [@post, @comment], id: "form", local: true do |f|%>
+          <div class="field">
+            <%= f.text_field :text, placeholder:"コメントを入力...", class: :comment_form %>
+          </div>
+          <div class="actions">
+            <%= f.submit "コメントする", id: "comment",  class: :comment_btn  %>
+          </div>
+        <% end %> 
+          <ul class="comments_lists">
+            <% @comments.each do |comment| %>
+              <li class="comments_list">
+                <%= link_to "#{comment.user.nickname}", user_path(comment.user), class: :comment_user %>
+                <p><%= comment.text%></p>
+              </li>
+            <% end %>
+          </ul>
+       </div> 
+  </div>
 
- </div> 
- </div>
-<%= link_to @post.user.nickname, user_path(@post.user.id), class: :showmy_btn %>
+<%= link_to @post.user.nickname, user_path(@post.id), class: :showmy_btn %>
 <%= link_to "削除する", post_path(@post.id), method: :delete, class: :showdestroy_btn %>
 <%= link_to "編集する", edit_post_path(@post.id), class: :showedit_btn %>
 </div>

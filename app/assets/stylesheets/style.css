@@ -380,7 +380,7 @@ hr {
 
 
 .fadein {
-  padding: 10px 0 30px 0;
+  padding: 30px 0 30px 0;
   display: inline-block;
   background-color: white;
   border-radius: 10px;
@@ -537,8 +537,9 @@ html, body {
   margin: 0;
 }
 
-.inst-title {
-  margin-right: 200px;
+.inst_title {
+  margin-top: 5px;
+  margin: 0 auto;
   height: 32px;
   color: gray;
   font-size: large;
@@ -747,6 +748,7 @@ textarea:focus {
   left:0;
   z-index: -3;
   opacity: 0.0;
+  position: fixed;
 }
 #slideshow img.active {
   z-index: -1;
@@ -916,6 +918,8 @@ textarea:focus {
   color: #fff;
   font-family: 'Comfortaa', cursive;
   margin-left: 10px;
+  position: fixed;
+  z-index: -1;
 }
 
 .iu {
@@ -927,7 +931,8 @@ textarea:focus {
   color: #fff;
   font-family: 'Comfortaa', cursive;
   margin-left: 10px;
-
+  position: fixed;
+  z-index: -1;
 }
 
 .eo {
@@ -939,7 +944,8 @@ textarea:focus {
   color: #fff;
   font-family: 'Comfortaa', cursive;
   margin-left: 10px;
-
+  position: fixed;
+  z-index: -1;
 }
 
 .showsheet1 {
@@ -975,9 +981,11 @@ textarea:focus {
 
 .title-h {
   top: 10px;
-  right: 500px;
+  right: 505px;
   font-size: 40px;
   position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 
 .title-hr {
@@ -999,6 +1007,7 @@ textarea:focus {
   width: 450px;
   height: 88px;
   font-size: 30px;
+  font-family: 'Hannotate SC', sans-serif;
   text-decoration: none;
   overflow: hidden;
   box-shadow: 0 0 1.2rem -0.2rem rgba(0,0,0,0.5);
@@ -1011,6 +1020,8 @@ textarea:focus {
   right: 476px;
   font-size: 40px;
   position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 
 .title-hr2 {
@@ -1026,13 +1037,14 @@ textarea:focus {
   position: absolute;
   top: 360px;
   right: 150px;
-  padding: 20px 300px 0 10px;
+  padding: 20px 30px 0 10px;
   display: inline-block;
   background-color: white;
   border-radius: 10px;
   width: 450px;
   height: 180px;
   font-size: 20px;
+  font-family: 'Hannotate SC', sans-serif;
   text-decoration: none;
   overflow: hidden;
   box-shadow: 0 0 1.2rem -0.2rem rgba(0,0,0,0.5);
@@ -1076,10 +1088,14 @@ textarea:focus {
   margin-top: 20px;
 }
 
+.showdestroy_btn:hover{
+  color: rgb(255, 245, 112);
+}
+
 .showedit_btn {
   position: absolute;
   top: 200px;
-  right: 300px;
+  right: 320px;
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 1.2em;
@@ -1093,16 +1109,41 @@ textarea:focus {
   margin-top: 20px;
 }
 
+.showedit_btn:hover{
+  color: rgb(255, 245, 112);
+}
+
 .show2 {
   background: #83a4d4;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #b6fbff, #8eaddd); 
+  height: 600px;
+  position: relative;
+  margin-top: 210px;
+}
+
+.title-h3 {
+  top: 15px;
+  left: 256px;
+  font-size: 40px;
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.title-hr3 {
+  position: absolute;
+  top: 90px;
+  left: 180px;
+  width: 980px;
+  height: 2px;
+  margin-left: 50px;
 }
 
 .show-comments {
-  height: 330px;
-  width: 900px;
-  margin: 50px auto;
+  height: 380px;
+  width: 1000px;
+  margin: 130px auto;
   background-color: #fff;
   display: inline-block;
   border-radius: 10px;
@@ -1115,7 +1156,7 @@ textarea:focus {
 }
 
 .comment_form {
-  width: 700px;
+  width: 800px;
   position: absolute;
   left: 100px;
   top: 20px;
@@ -1155,3 +1196,82 @@ textarea:focus {
   font-size: 15px;
 }
 
+.nickname-h {
+  top: 10px;
+  right: 380px;
+  font-size: 40px;
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.nickname-h2 {
+  top: 240px;
+  right: 455px;
+  font-size: 40px;
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.show3 {
+  margin-top: 180px;
+  height: 1500px;
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #b6fbff, #8eaddd); 
+  position: relative;
+}
+
+.usercard-list {
+  position: absolute;
+  top: 130px;
+}
+
+.userdestroy_btn {
+  position: absolute;
+  top: 200px;
+  right: 120px;
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  font-family: 'Jost', sans-serif;
+  margin-top: 20px;
+}
+
+.userdestroy_btn:hover{
+  color: rgb(255, 245, 112);
+}
+
+.useredit_btn {
+  position: absolute;
+  top: 200px;
+  right: 240px;
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border: none;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  font-family: 'Jost', sans-serif;
+  margin-top: 20px;
+}
+
+.useredit_btn:hover{
+  color: rgb(255, 245, 112);
+}
+
+.user_image {
+  height: 600px;
+  width: 500px;
+  margin-top: 10px;
+}
