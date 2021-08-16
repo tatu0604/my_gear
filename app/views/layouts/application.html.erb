@@ -86,8 +86,8 @@ $(function() {
             <div class="nav__right">
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: :nav__btn %>
               <%= link_to current_user.nickname, user_path(current_user.id), class: :nav__btn %>
-              <%= link_to "Help", help_posts_path, class: :nav__btn %>
-              <%= link_to "Contact", contact_posts_path, class: :nav__btn, id: :category %>
+              <%= link_to "Help", "#", class: :nav__btn %>
+              <%= link_to "Contact", "#", class: :nav__btn, id: :category %>
               
             </div>
    
@@ -111,7 +111,7 @@ $(function() {
     <%= yield %>
 
     <footer class="footer">
-      <p class="copyright">Copyright © My Gear All rights reserved.</p>
+      <p class="footer-f">◎ My Gear 2021.</p>
     </footer>
   </body>
 </html>
