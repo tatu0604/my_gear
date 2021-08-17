@@ -37,7 +37,7 @@
   </div>
 
 <% if current_user.id == @post.user.id %>
-  <%= link_to "削除する", post_path(@post.id), method: :delete, class: :showdestroy_btn %>
+  <%= link_to "削除する", post_path(@post.id), method: :delete, class: :showdestroy_btn, data: { confirm: "本当に　　 削除してもよろしいですか？" } %>
   <%= link_to "編集する", edit_post_path(@post.id), class: :showedit_btn %>
   <% else %>
   <%= link_to @post.user.nickname, user_path(@post.user), class: :showmy_btn %>

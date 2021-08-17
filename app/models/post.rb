@@ -3,12 +3,12 @@ class Post < ApplicationRecord
   belongs_to :category
 
   with_options presence: true do
-    validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
+    validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :image
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Post.where('title LIKE(?)', "%#{search}%")
       Post.where('summary LIKE(?)', "%#{search}%")
     else

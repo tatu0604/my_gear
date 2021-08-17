@@ -21,5 +21,4 @@ class Category < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :post
-
-  end
+end

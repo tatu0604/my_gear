@@ -25,7 +25,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -46,16 +45,13 @@ class PostsController < ApplicationController
   end
 
   def help
-    
   end
 
   def contact
-    
   end
 
   def guitar
     @posts = Post.where(category_id: 2)
-    
   end
 
   def bass
@@ -118,7 +114,6 @@ class PostsController < ApplicationController
     @posts = Post.where(category_id: 17)
   end
 
-
   private
 
   def post_params
@@ -128,5 +123,4 @@ class PostsController < ApplicationController
   def set_posts
     @post = Post.find(params[:id])
   end
-
 end
