@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to post_path(@post.id)
+    redirect_to root_path
   end
 
   def search
