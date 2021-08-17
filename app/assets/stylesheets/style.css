@@ -1277,3 +1277,7 @@ textarea:focus {
   width: 500px;
   margin-top: 10px;
 }
+
+#user_email {
+  background: transparent;
+}

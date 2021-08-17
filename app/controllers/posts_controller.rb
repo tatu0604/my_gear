@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_posts, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.includes(:user).order('created_at DESC')
@@ -19,17 +20,15 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments
   end
 
   def edit
-    @post = Post.find(params[:id])
+
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to root_path
     else
@@ -38,7 +37,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to post_path(@post.id)
   end
@@ -48,11 +46,11 @@ class PostsController < ApplicationController
   end
 
   def help
-    @posts = Post.all
+    
   end
 
   def contact
-    @posts = Post.all
+    
   end
 
   def guitar
@@ -125,6 +123,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :summary, :image, :category_id).merge(user_id: current_user.id)
+  end
+
+  def set_posts
+    @post = Post.find(params[:id])
   end
 
 end
