@@ -760,7 +760,7 @@ textarea:focus {
 }
 
 .guitar {
-  background-image: image-rl("guitar.jpg");
+  background-image: image-url("guitar.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -797,7 +797,7 @@ textarea:focus {
 }
 
 .drum {
-  background-image: iamge-url("drum.jpg");
+  background-image: image-url("drum.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
