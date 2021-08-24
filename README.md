@@ -38,6 +38,12 @@ HTML / CSS / JavaScript / jQuery
 Ruby / Ruby on Rails / RuboCop
 ## データベース
 MySQL / Sequel Pro
+## インフラ
+AWS(EC2) , Capistrano
+## Webサーバ
+Nginx
+## アプリケーションサーバ
+Unicorn
 ## ソース管理
 GitHub / GitHubDesktop
 ## テスト
