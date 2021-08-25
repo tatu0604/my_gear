@@ -46,8 +46,6 @@ Nginx
 Unicorn
 ## ソース管理
 GitHub / GitHubDesktop
-## テスト
-RSpec
 ## エディタ
 VSCode
 
